@@ -16,7 +16,7 @@ void slab_pool_init(){
 }
 
 void* slab_alloc_4k(){
-  void* pmem = pslab_ist[next_free_slab];
+  void* pmem = pslab_list[next_free_slab];
   next_free_slab++;
   next_free_slab &= (MAX_SLABS-1);
   return pmem;
